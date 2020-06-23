@@ -5,13 +5,13 @@ import { Image } from 'react-native';
 import * as flags from './flags';
 
 type Props = {
-  size: 16 | 24 | 32 | 48 | 64,
+  size: 32 | 64,
   code: string,
-  type?: 'flat' | 'shiny',
+  type?: 'flat',
   style?: any,
 };
 
-const Flag = ({ size = 64, code, type = 'shiny', style }: Props) => {
+const Flag = ({ size = 64, code, type = 'flat', style }: Props) => {
   const flag = flags[type][`icons${size}`][code];
   const unknownFlag = flags[type][`icons${size}`]['unknown'];
 
